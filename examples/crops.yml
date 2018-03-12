@@ -1,0 +1,188 @@
+---
+
+URL: http://fenixservices.fao.org/faostat/static/bulkdownloads/Production_Crops_E_All_Data.zip
+
+Title: Crops
+Year: 2013
+
+Elements:
+  - Production
+  - Area harvested
+
+Display:
+  MaxLevel: 2
+  Elements:
+    - Prod
+    - Area
+
+Areas:
+  - World
+  - European Union
+  - Western Europe
+  - United States of America
+  - China
+  - India
+  - Brazil
+  - France
+  - Germany
+
+Items:
+  Crops:
+    Cereals:
+      - Barley
+      - Buckwheat
+      - Canary seed
+      - Cereals, nes
+      - Fonio
+      - Grain, mixed
+      - Maize
+      - Millet
+      - Oats
+      - Quinoa
+      - Rice, paddy
+      - Rye
+      - Sorghum
+      - Triticale
+      - Wheat
+
+    Roots:
+      - Cassava
+      - Potatoes
+      - Roots and tubers, nes
+      - Sweet potatoes
+      - Taro (cocoyam)
+      - Yams
+      - Yautia (cocoyam)
+
+    Pulses:
+      - Bambara beans
+      - Beans, dry
+      - Broad beans, horse beans, dry
+      - Chick peas
+      - Cow peas, dry
+      - Lentils
+      - Lupins
+      - Peas, dry
+      - Pigeon peas
+      - Pulses, nes
+      - Vetches
+
+    Vegetables: # Without melons and watermelons
+      - Artichokes
+      - Asparagus
+      - Beans, green
+      - Cabbages and other brassicas
+      - Carrots and turnips
+      - Cassava leaves
+      - Cauliflowers and broccoli
+      - Chillies and peppers, green
+      - Cucumbers and gherkins
+      - Eggplants (aubergines)
+      - Garlic
+      - Leeks, other alliaceous vegetables
+      - Lettuce and chicory
+      - Maize, green
+      - Mushrooms and truffles
+      - Okra
+      - Onions, dry
+      - Onions, shallots, green
+      - Peas, green
+      - Pumpkins, squash and gourds
+      - Spinach
+      - String beans
+      - Tomatoes
+      - Vegetables, fresh nes
+      - Vegetables, leguminous nes
+
+    Fruits: # Including melons and watermelons
+      - Apples
+      - Apricots
+      - Avocados
+      - Bananas
+      - Berries nes
+      - Blueberries
+      - Carobs
+      - Cashewapple
+      - Cherries
+      - Cherries, sour
+      - Cranberries
+      - Currants
+      - Dates
+      - Figs
+      - Fruit, citrus nes
+      - Fruit, fresh nes
+      - Fruit, pome nes
+      - Fruit, stone nes
+      - Fruit, tropical fresh nes
+      - Gooseberries
+      - Grapefruit (inc. pomelos)
+      - Grapes
+      - Kiwi fruit
+      - Lemons and limes
+      - Mangoes, mangosteens, guavas
+      - Melons, other (inc.cantaloupes)
+      - Oranges
+      - Papayas
+      - Peaches and nectarines
+      - Pears
+      - Persimmons
+      - Pineapples
+      - Plantains and others
+      - Plums and sloes
+      - Quinces
+      - Raspberries
+      - Strawberries
+      - Tangerines, mandarins, clementines, satsumas
+      - Watermelons
+
+    Nuts:
+      - Almonds, with shell
+      - Brazil nuts, with shell
+      - Cashew nuts, with shell
+      - Chestnut
+      - Hazelnuts, with shell
+      - Nuts, nes
+      - Pistachios
+      - Walnuts, with shell
+
+    Sugar Crops:
+      - Sugar beet
+      - Sugar cane
+      - Sugar crops, nes
+
+    Oil Crops:
+      - Castor oil seed
+      - Coconuts
+      - Groundnuts, with shell
+      - Hempseed
+      - Jojoba seed
+      - Karite nuts (sheanuts)
+      - Linseed
+      - Melonseed
+      - Mustard seed
+      - Oil, palm fruit
+      - Oilseeds nes
+      - Olives
+      - Poppy seed
+      - Rapeseed
+      - Safflower seed
+      - Sesame seed
+      - Soybeans
+      - Sunflower seed
+      - Tallowtree seed
+      - Tung nuts
+      # - Kapok fruit
+      # - Seed cotton
+
+    Fibres:
+      - Agave fibres nes
+      - Bastfibres, other
+      - Fibre crops nes
+      - Flax fibre and tow
+      - Hemp tow waste
+      - Jute
+      - Kapok fruit
+      - Manila fibre (abaca)
+      - Ramie
+      - Seed cotton
+      - Sisal

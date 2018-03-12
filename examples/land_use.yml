@@ -1,0 +1,35 @@
+---
+
+URL: http://fenixservices.fao.org/faostat/static/bulkdownloads/Inputs_LandUse_E_All_Data.zip
+
+Title: Land Use
+Year: 2013
+
+Elements:
+  - Area
+
+Display:
+  MaxLevel: 2
+
+Areas:
+  - World
+  - European Union
+  - Western Europe
+  - United States of America
+  - China
+  - India
+  - Brazil
+  - France
+  - Germany
+
+Items:
+  Land:
+    Crops:
+      - Permanent crops
+      - Arable land
+    Pastures:
+      - Permanent meadows and pastures
+    Forests:
+      - Forest
+    Other:
+      - Other land

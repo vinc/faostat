@@ -1,0 +1,30 @@
+---
+
+URL: http://fenixservices.fao.org/faostat/static/bulkdownloads/Population_E_All_Data.zip
+
+Title: Population
+Year: 2013
+
+Elements:
+  - Total Population - Both sexes
+
+Display:
+  MaxLevel: 2
+  Elements:
+    - Pop
+
+Areas:
+  - World
+  - European Union
+  - Western Europe
+  - United States of America
+  - China
+  - India
+  - Brazil
+  - France
+  - Germany
+
+Items:
+  Population:
+    Humans:
+      - Population - Est. & Proj.

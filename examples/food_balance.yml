@@ -1,0 +1,120 @@
+---
+
+URL: http://fenixservices.fao.org/faostat/static/bulkdownloads/FoodBalanceSheets_E_All_Data.zip
+
+Title: Food Balance
+Year: 2013
+
+Elements:
+  - Production
+  - Domestic supply quantity
+  - Food
+  - Feed
+  - Seed
+  - Processing
+  - Losses
+  - Other uses # non-food
+
+Display:
+  MaxLevel: 2
+  Elements:
+    - Prod
+    - Supply
+    - Food
+    - Feed
+    - Seed
+    - Process
+    - Waste
+    - Other
+
+Areas:
+  - World
+  - European Union
+  - Western Europe
+  - United States of America
+  - China
+  - India
+  - Brazil
+  - France
+  - Germany
+
+Items:
+  Crops:
+    Cereals:
+      - Barley and products
+      - Cereals, Other
+      - Maize and products
+      - Millet and products
+      - Oats
+      - Rice (Milled Equivalent)
+      - Rye and products
+      - Sorghum and products
+      - Wheat and products
+
+    Roots:
+      - Cassava and products
+      - Potatoes and products
+      - Roots, Other
+      - Sweet potatoes
+      - Yams
+
+    Pulses:
+      - Beans
+      - Peas
+      - Pulses, Other and products
+      - Cloves
+      - Pepper
+      - Pimento
+      - Spices, Other
+
+    Vegetables:
+      - Onions
+      - Tomatoes and products
+      - Vegetables, Other
+
+    Fruits:
+      - Apples and products
+      - Bananas
+      - Citrus, Other
+      - Dates
+      - Fruits, Other
+      - Grapefruit and products
+      - Grapes and products (excl wine)
+      - Lemons, Limes and products
+      - Oranges, Mandarines
+      - Pineapples and products
+      - Plantains
+
+    Nuts:
+      - Nuts and products
+
+    Sugar Crops:
+      - Sugar beet
+      - Sugar cane
+
+    Oil Crops:
+      - Coconuts -  Incl Copra
+      - Cottonseed
+      - Groundnuts (Shelled Eq)
+      - Oilcrops, Other
+      - Olives (including preserved)
+      - Palm kernels
+      - Rape and Mustardseed
+      - Sesame seed
+      - Soyabeans
+      - Sunflower seed
+
+    Vegetable Oils:
+      - Coconut Oil
+      - Cottonseed Oil
+      - Groundnut Oil
+      - Maize Germ Oil
+      - Oilcrops Oil, Other
+      - Olive Oil
+      - Palm Oil
+      - Palmkernel Oil
+      - Rape and Mustard Oil
+      - Ricebran Oil
+      - Sesameseed Oil
+      - Soyabean Oil
+      - Sunflowerseed Oil

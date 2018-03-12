@@ -1,0 +1,49 @@
+---
+
+URL: http://fenixservices.fao.org/faostat/static/bulkdownloads/Production_Livestock_E_All_Data.zip
+
+Title: Livestock
+Year: 2013
+
+Elements:
+  - Stocks
+
+Display:
+  MaxLevel: 2
+  Format:
+    Item: "%-37s"
+    Element: "%8.2f"
+
+Areas:
+  - World
+  - European Union
+  - Western Europe
+  - United States of America
+  - China
+  - India
+  - Brazil
+  - France
+  - Germany
+
+Items:
+  Livestock:
+    - Animals live nes
+    - Asses
+    - Beehives
+    - Buffaloes
+    - Camelids, other
+    - Camels
+    - Cattle
+    - Chickens
+    - Ducks
+    - Geese and guinea fowls
+    - Goats
+    - Horses
+    - Mules
+    - Pigeons, other birds
+    - Pigs
+    - Rabbits and hares
+    - Rodents, other
+    - Sheep
+    - Turkeys
+
