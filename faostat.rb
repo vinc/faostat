@@ -29,6 +29,7 @@ class Faostat
     printf("# #{@title}\n")
     printf("\n")
     printf("Source: FAOSTAT #{@year}\n")
+    printf("\n")
     printf("Units: #{@display_units.join(', ')}\n")
 
     @unit = 1_000_000
