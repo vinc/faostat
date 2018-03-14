@@ -1,4 +1,6 @@
-# FAOSTAT: CSV to Markdown
+# FAOSTAT
+
+CSV to Markdown
 
 ## Usage
 
