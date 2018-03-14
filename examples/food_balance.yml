@@ -26,6 +26,8 @@ Display:
     - Process
     - Waste
     - Other
+  Units:
+    - million tonnes
 
 Areas:
   - World

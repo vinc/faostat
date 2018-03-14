@@ -10,6 +10,11 @@ Elements:
 
 Display:
   MaxLevel: 2
+  Format:
+    Item: "%-37s"
+    Element: "%8.2f"
+  Units:
+    - million hectares
 
 Areas:
   - World

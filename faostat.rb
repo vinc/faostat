@@ -18,6 +18,7 @@ class Faostat
     @display_elements = config.dig("Display", "Elements") || config["Elements"]
     @display_format_item = config.dig("Display", "Format", "Item") || "%-37s"
     @display_format_element = config.dig("Display", "Format", "Element") || "%7.2f"
+    @display_units = config.dig("Display", "Units") || []
 
     csv_file = yml_file.ext(".csv")
     download_csv(config["URL"], csv_file) unless File.exist?(csv_file)
@@ -28,6 +29,7 @@ class Faostat
     printf("# #{@title}\n")
     printf("\n")
     printf("Source: FAOSTAT #{@year}\n")
+    printf("Units: #{@display_units.join(', ')}\n")
 
     @unit = 1_000_000
 

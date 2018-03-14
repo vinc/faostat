@@ -12,6 +12,8 @@ Display:
   MaxLevel: 2
   Elements:
     - Pop
+  Units:
+    - million people
 
 Areas:
   - World

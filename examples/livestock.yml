@@ -13,6 +13,8 @@ Display:
   Format:
     Item: "%-37s"
     Element: "%8.2f"
+  Units:
+    - million heads
 
 Areas:
   - World
