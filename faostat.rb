@@ -131,15 +131,15 @@ class Faostat
       when Array
         @elements.each do |element|
           @data[area][group][element] ||= 0
-          @data[area][group][element] += @data[area][item][element] || 0
+          @data[area][group][element] += @data[area][item][element] || 0 unless group == item
         end
       when Hash
         @elements.each do |name, elements|
           @data[area][group][name] ||= 0
           elements.each do |element|
             @data[area][group][element] ||= 0
-            @data[area][group][element] += @data[area][item][element] || 0
-            @data[area][group][name] += @data[area][item][element] || 0 if name != element
+            @data[area][group][element] += @data[area][item][element] || 0 unless group == item
+            @data[area][group][name] += @data[area][item][element] || 0 unless name == element
           end
         end
       end
