@@ -9,16 +9,18 @@ class Faostat
 
     @title = config["Title"]
     @year = config["Year"]
+    @unit = config["Unit"] || 1_000_000
     @areas = config["Areas"]
     @elements = config["Elements"]
 
     @items = config["Items"]
 
     @display_max_level = config.dig("Display", "MaxLevel") || 99
-    @display_elements = config.dig("Display", "Elements") || config["Elements"]
     @display_format_item = config.dig("Display", "Format", "Item") || "%-37s"
     @display_format_element = config.dig("Display", "Format", "Element") || "%7.2f"
     @display_units = config.dig("Display", "Units") || []
+    @display_elements = config.dig("Display", "Elements") || config["Elements"]
+    @display_elements = @display_elements.keys if @display_elements.is_a? Hash
 
     csv_file = yml_file.ext(".csv")
     download_csv(config["URL"], csv_file) unless File.exist?(csv_file)
@@ -31,8 +33,6 @@ class Faostat
     printf("Source: FAOSTAT #{@year}\n")
     printf("\n")
     printf("Units: #{@display_units.join(', ')}\n")
-
-    @unit = 1_000_000
 
     @areas.each do |area|
       @items.each do |group, group_items|
@@ -87,6 +87,10 @@ class Faostat
       output: $stderr,
       total: File.open(csv_file).readlines.count
     )
+
+    items = deep_values(@items).flatten.uniq
+    elements = deep_values(@elements).flatten.uniq
+
     CSV.foreach(csv_file, headers: true, encoding: "iso-8859-1") do |row|
       progressbar.increment
       area = row["Area"]
@@ -94,10 +98,10 @@ class Faostat
       next unless @areas.include? area
 
       item = row["Item"]
-      next unless deep_values(@items).flatten.uniq.include? item
+      next unless items.include? item
 
       element = row["Element"]
-      next unless @elements.include? element
+      next unless elements.flatten.uniq.include? element
 
       unit = row["Unit"]
       value = row["Y#{@year}"] || 0
@@ -123,9 +127,21 @@ class Faostat
 
     group_items.each do |item|
       @data[area][item] ||= {}
-      @elements.each do |element|
-        @data[area][group][element] ||= 0
-        @data[area][group][element] += @data[area][item][element] || 0
+      case @elements
+      when Array
+        @elements.each do |element|
+          @data[area][group][element] ||= 0
+          @data[area][group][element] += @data[area][item][element] || 0
+        end
+      when Hash
+        @elements.each do |name, elements|
+          @data[area][group][name] ||= 0
+          elements.each do |element|
+            @data[area][group][element] ||= 0
+            @data[area][group][element] += @data[area][item][element] || 0
+            @data[area][group][name] += @data[area][item][element] || 0 if name != element
+          end
+        end
       end
     end
   end
@@ -159,8 +175,10 @@ class Faostat
     return unless level < @display_max_level
     dots = ([".."] * level).join(".")
     printf("    | #{@display_format_item} |", [dots, item].reject(&:empty?).join(" "))
-    @elements.each do |element|
-      @data[area][item] ||= {} # FIXME
+
+    @data[area][item] ||= {} # FIXME
+    elements = @elements.is_a?(Hash) ? @elements.keys : @elements
+    elements.each do |element|
       value = @data[area][item][element]
       if value
         printf(" #{@display_format_element} |", value / @unit)
@@ -187,6 +205,7 @@ class Faostat
   end
 
   def deep_values(hash)
+    return hash unless hash.is_a? Hash
     hash.values.map do |value|
       case value
       when Hash

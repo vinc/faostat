@@ -2,35 +2,18 @@
 
 URL: http://fenixservices.fao.org/faostat/static/bulkdownloads/FoodBalanceSheets_E_All_Data.zip
 
-Title: Food Balance
+Title: Food Supply
 Year: 2013
+Unit: 1
 
 Elements:
-  Prod:
-    - Production
-  Import:
-    - Import Quantity
-  Export:
-    - Export Quantity
-  Supply:
-    - Domestic supply quantity
-  Proc:
-    - Processing
-  Proc:
-    - Processing
-  Food:
-    - Food
-  Feed:
-    - Feed
-  Other:
-    - Seed
-    - Losses
-    - Other uses # non-food
+  Calories:
+    - Food supply (kcal/capita/day)
 
 Display:
   MaxLevel: 2
   Units:
-    - million tonnes
+    - (kcal/capita/day)
 
 Areas:
   - World
@@ -43,8 +26,45 @@ Areas:
   - France
   - Germany
 
+#Items:
+#  - Animal Products
+#  - Vegetal Products
+
 Items:
-  Crops:
+  Animal Products:
+    Meat:
+      - Bovine Meat
+      - Fats, Animals, Raw
+      - Meat, Other
+      - Mutton & Goat Meat
+      - Offals, Edible
+      - Pigmeat
+      - Poultry Meat
+
+    Dairy:
+      - Butter, Ghee
+      - Cream
+      - Milk - Excluding Butter
+
+    Eggs:
+      - Eggs
+
+    Seafood:
+      - Aquatic Animals, Others
+      - Aquatic Plants
+      - Cephalopods
+      - Crustaceans
+      - Demersal Fish
+      - Fish, Body Oil
+      - Fish, Liver Oil
+      - Freshwater Fish
+      - Marine Fish, Other
+      - Meat, Aquatic Mammals
+      - Molluscs, Other
+      - Pelagic Fish
+
+
+  Vegetal Products:
     Cereals:
       - Barley and products
       - Cereals, Other
@@ -96,6 +116,9 @@ Items:
     Sugar:
       - Sugar beet
       - Sugar cane
+      - Sugar (Raw Equivalent)
+      - Sugar non-centrifugal
+      - Sweeteners, Other
 
     Oil:
       # Oil Crops:
@@ -124,3 +147,16 @@ Items:
       - Sesameseed Oil
       - Soyabean Oil
       - Sunflowerseed Oil
+
+    Other:
+      - Alcohol, Non-Food
+      - Beer
+      - Beverages, Alcoholic
+      - Beverages, Fermented
+      - Cocoa Beans and products
+      - Coffee and products
+      - Honey
+      - Infant food
+      - Miscellaneous
+      - Tea (including mate)
+      - Wine

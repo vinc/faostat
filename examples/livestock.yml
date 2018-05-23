@@ -29,23 +29,33 @@ Areas:
 
 Items:
   Livestock:
-    - Animals live nes
-    - Asses
-    - Beehives
-    - Buffaloes
-    - Camelids, other
-    - Camels
-    - Cattle
-    - Chickens
-    - Ducks
-    - Geese and guinea fowls
-    - Goats
-    - Horses
-    - Mules
-    - Pigeons, other birds
-    - Pigs
-    - Rabbits and hares
-    - Rodents, other
-    - Sheep
-    - Turkeys
+    Cattle:
+      - Cattle
+    Pigs:
+      - Pigs
+    Sheep:
+      - Sheep
+    Goats:
+      - Goats
+
+    Chickens:
+      - Chickens
+    Ducks:
+      - Ducks
+    Turkeys:
+      - Turkeys
+
+    Other:
+      - Animals live nes
+      - Asses
+      - Beehives
+      - Buffaloes
+      - Camelids, other
+      - Camels
+      - Geese and guinea fowls
+      - Horses
+      - Mules
+      - Pigeons, other birds
+      - Rabbits and hares
+      - Rodents, other
 

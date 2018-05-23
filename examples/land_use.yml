@@ -9,7 +9,7 @@ Elements:
   - Area
 
 Display:
-  MaxLevel: 2
+  MaxLevel: 3
   Format:
     Item: "%-37s"
     Element: "%8.2f"
@@ -35,6 +35,12 @@ Items:
     Pastures:
       - Permanent meadows and pastures
     Forests:
-      - Forest
+      # - Forest
+      Primary forests:
+        - Primary forest
+      Planted forests:
+        - Planted forest
+      Naturally regenerated forests:
+        - Other naturally regenerated forest
     Other:
       - Other land

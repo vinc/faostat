@@ -6,12 +6,11 @@ Title: Population
 Year: 2013
 
 Elements:
-  - Total Population - Both sexes
+  Pop:
+    - Total Population - Both sexes
 
 Display:
-  MaxLevel: 2
-  Elements:
-    - Pop
+  MaxLevel: 1
   Units:
     - million people
 
@@ -27,6 +26,5 @@ Areas:
   - Germany
 
 Items:
-  Population:
-    Humans:
-      - Population - Est. & Proj.
+  Humans:
+    - Population - Est. & Proj.
