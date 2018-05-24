@@ -8,14 +8,12 @@ Year: 2013
 Elements:
   Prod:
     - Production
-  Import:
-    - Import Quantity
-  Export:
-    - Export Quantity
+  #Import:
+  #  - Import Quantity
+  #Export:
+  #  - Export Quantity
   Supply:
     - Domestic supply quantity
-  Proc:
-    - Processing
   Proc:
     - Processing
   Food:
