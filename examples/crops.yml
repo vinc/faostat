@@ -174,8 +174,6 @@ Items:
       - Sunflower seed
       - Tallowtree seed
       - Tung nuts
-      # - Kapok fruit
-      # - Seed cotton
 
     Fibres:
       - Agave fibres nes
@@ -189,3 +187,37 @@ Items:
       - Ramie
       - Seed cotton
       - Sisal
+
+    Spices:
+      - Anise, badian, fennel, coriander
+      - Chillies and peppers, dry
+      - Cinnamon (canella)
+      - Cloves
+      - Ginger
+      - Hops
+      - Nutmeg, mace and cardamoms
+      - Pepper (piper spp.)
+      - Peppermint
+
+    Stimulants:
+      - Areca nuts
+      - Chicory roots
+      - Cocoa, beans
+      - Coffee, green
+      - Maté
+      - Spices, nes
+      - Tea
+      - Tobacco, unmanufactured
+
+    Other:
+      - Coir
+      - Cotton lint
+      - Cottonseed
+      - Gums, natural
+      - Kapok fibre
+      - Kapok fruit
+      - Kapokseed in shell
+      - Kola nuts
+      - Pyrethrum, dried
+      - Rubber, natural
+      - Seed cotton

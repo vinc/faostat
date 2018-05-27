@@ -28,6 +28,11 @@ class Faostat
   end
 
   def display
+    @items.each do |item_group, items|
+      compute_items(item_group, items)
+    end
+    @areas = @areas.keys if @areas.is_a? Hash
+
     printf("# #{@title}\n")
     printf("\n")
     printf("Source: FAOSTAT #{@year}\n")
@@ -35,10 +40,6 @@ class Faostat
     printf("Units: #{@display_units.join(', ')}\n")
 
     @areas.each do |area|
-      @items.each do |group, group_items|
-        compute_group_items(area, group, group_items)
-      end
-
       printf("\n")
       printf("\n")
       printf("## %s\n", area)
@@ -88,6 +89,7 @@ class Faostat
       total: File.open(csv_file).readlines.count
     )
 
+    areas = deep_values(@areas).flatten.uniq
     items = deep_values(@items).flatten.uniq
     elements = deep_values(@elements).flatten.uniq
 
@@ -95,7 +97,7 @@ class Faostat
       progressbar.increment
       area = row["Area"]
       # break if area[0..1] > "Ch"
-      next unless @areas.include? area
+      next unless areas.include? area
 
       item = row["Item"]
       next unless items.include? item
@@ -122,7 +124,42 @@ class Faostat
     $stderr.write("\n")
   end
 
-  def compute_group(area, group, group_items)
+  def compute_group(group, group_items)
+    case @areas
+    when Array
+      @areas.each do |area|
+        compute_area(area, group, group_items)
+      end
+    when Hash
+      @areas.each do |area, subareas|
+        @data[area] ||= {}
+        @data[area][group] ||= {}
+        subareas.each do |subarea|
+          next if area == subarea
+          compute_area(subarea, group, group_items)
+          case @elements
+          when Array
+            @elements.each do |element|
+              @data[area][group][element] ||= 0
+              @data[area][group][element] += @data[subarea][group][element]
+            end
+          when Hash
+            @elements.each do |name, elements|
+              @data[area][group][name] ||= 0
+              elements.each do |element|
+                @data[area][group][element] ||= 0
+                @data[area][group][element] += @data[subarea][group][element]
+                @data[area][group][name] += @data[subarea][group][name] unless name == element
+              end
+            end
+          end
+        end
+      end
+    end
+  end
+
+  def compute_area(area, group, group_items)
+    @data[area] ||= {}
     @data[area][group] ||= {}
 
     group_items.each do |item|
@@ -146,14 +183,14 @@ class Faostat
     end
   end
 
-  def compute_group_items(area, group, group_items)
+  def compute_items(group, group_items)
     if group_items.is_a? Hash
       group_items.each do |subgroup, subgroup_items|
-        compute_group_items(area, subgroup, subgroup_items)
+        compute_items(subgroup, subgroup_items)
       end
       group_items = group_items.keys
     end
-    compute_group(area, group, group_items)
+    compute_group(group, group_items)
   end
 
   def print_group(area, group, group_items, level)

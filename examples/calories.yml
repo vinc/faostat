@@ -12,6 +12,8 @@ Elements:
 
 Display:
   MaxLevel: 2
+  Format:
+    Element: "%6d"
   Units:
     - (kcal/capita/day)
 

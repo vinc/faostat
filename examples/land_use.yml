@@ -17,23 +17,51 @@ Display:
     - million hectares
 
 Areas:
-  - World
-  - European Union
-  - Western Europe
-  - United States of America
-  - China
-  - India
-  - Brazil
-  - France
-  - Germany
+  World:
+    - World
+  Western Europe:
+    - Austria
+    - Belgium
+    - France
+    - Germany
+    - Liechtenstein
+    - Luxembourg
+    - Monaco
+    - Netherlands
+    - Switzerland
+  # - Ireland
+  # - United Kingdom
+  # - Denmark
+  # - Spain
+  # - Portugal
+  # - Italy
+  United States of America:
+    - United States of America
+  China:
+    - China
+  India:
+    - India
+  Brazil:
+    - Brazil
+  France:
+    - France
+  Germany:
+    - Germany
 
 Items:
   Land:
     Crops:
-      - Permanent crops
-      - Arable land
+      Permanent crops:
+        - Permanent crops
+      Temporary crops:
+        - Temporary crops
+      Fallow land:
+        - Fallow land (temporary)
     Pastures:
-      - Permanent meadows and pastures
+      Permanent meadows and pastures:
+        - Permanent meadows and pastures
+      Temporary meadows and pastures:
+        - Temporary meadows and pastures
     Forests:
       # - Forest
       Primary forests:
@@ -43,4 +71,5 @@ Items:
       Naturally regenerated forests:
         - Other naturally regenerated forest
     Other:
-      - Other land
+      Other land:
+        - Other land
